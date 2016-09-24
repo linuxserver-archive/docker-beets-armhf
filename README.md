@@ -11,7 +11,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # lsioarmhf/beets
-[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/beets.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/beets.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-quassel)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-quassel/)
+[![](https://images.microbadger.com/badges/image/lsioarmhf/beets.svg)](https://microbadger.com/images/lsioarmhf/beets "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/beets.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/beets.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-beets)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-beets/)
 [hub]: https://hub.docker.com/r/lsioarmhf/beets/
 
 [Beets][beetsurl] is a music library manager and not, for the most part, a music player. It does include a simple player plugin and an experimental Web-based player, but it generally leaves actual sound-reproduction to specialized tools.
