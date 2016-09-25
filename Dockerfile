@@ -1,10 +1,10 @@
 FROM lsiobase/alpine.armhf
 MAINTAINER sparklyballs
 
-# environment settings
+# environment settings
 ENV BEETSDIR="/config"
 
-# install runtime packages
+# install runtime packages
 RUN \
  apk add --no-cache \
 	curl \
@@ -23,7 +23,7 @@ RUN \
 	sqlite-libs \
 	wget && \
 
-# install build packages
+# install build packages
  apk add --no-cache --virtual=build-dependencies \
 	cmake \
 	ffmpeg-dev \
@@ -36,7 +36,7 @@ RUN \
 	openjpeg-dev \
 	python-dev && \
 
-# compile mp3gain
+# compile mp3gain
  mkdir -p \
 	/tmp/mp3gain-src && \
  curl -o \
@@ -44,20 +44,22 @@ RUN \
 	https://sourceforge.net/projects/mp3gain/files/mp3gain/1.5.2/mp3gain-1_5_2_r2-src.zip && \
  cd /tmp/mp3gain-src && \
  unzip -qq /tmp/mp3gain-src/mp3gain.zip && \
+ sed -i "s#/usr/local/bin#/usr/bin#g" /tmp/mp3gain-src/Makefile && \
  make && \
  make install && \
 
-# compile chromaprint
+# compile chromaprint
  git clone https://bitbucket.org/acoustid/chromaprint.git \
 	/tmp/chromaprint && \
  cd /tmp/chromaprint && \
  cmake \
 	-DBUILD_EXAMPLES=ON . \
-	-DCMAKE_BUILD_TYPE=Release && \
+	-DCMAKE_BUILD_TYPE=Release \
+	-DCMAKE_INSTALL_PREFIX:PATH=/usr && \
  make && \
  make install && \
 
-# install pip packages
+# install pip packages
  pip install --no-cache-dir -U \
 	beets \
 	flask \
@@ -66,7 +68,7 @@ RUN \
 	pyacoustid \
 	pylast && \
 
-# cleanup
+# cleanup
  apk del --purge \
 	build-dependencies && \
  rm -rf \
