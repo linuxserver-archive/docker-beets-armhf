@@ -66,4 +66,5 @@ See Beets[beetsurl] for more info.
 
 ## Versions
 
++ **30.09.16:** Fix umask.
 + **24.09.16:** Initial Release
