@@ -57,7 +57,9 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 
 Edit the config file in /config
 
-See Beets[beetsurl] for more info.
+To edit the config from within the container use `beet config -e`
+
+See [Beets][beetsurl] for more info.
 
 ## Info
 
@@ -66,5 +68,7 @@ See Beets[beetsurl] for more info.
 
 ## Versions
 
++ **01.10.16:** Add nano and editor variable -
+to allow editing of the config from the container command line.
 + **30.09.16:** Fix umask.
 + **24.09.16:** Initial Release
