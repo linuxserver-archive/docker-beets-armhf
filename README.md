@@ -65,6 +65,8 @@ Edit the config file in /config
 
 To edit the config from within the container use `beet config -e`
 
+For a command prompt as user abc `docker exec -it -u abc beets bash`
+
 See [Beets][beetsurl] for more info.
 
 ## Info
@@ -82,6 +84,7 @@ See [Beets][beetsurl] for more info.
 
 ## Versions
 
++ **16.01.17:** Add packages required for replaygain.
 + **07.12.16:** Edit cmake options for chromaprint, should now build and install fpcalc, add gstreamer lib
 + **14.10.16:** Add version layer information.
 + **01.10.16:** Add nano and editor variable -
