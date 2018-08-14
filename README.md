@@ -84,6 +84,7 @@ See [Beets][appurl] for more info.
 
 ## Versions
 
++ **14.08.18:** Rebase to alpine 3.8 and use python3.
 + **12.08.18:** Add requests pip package.
 + **04.03.18:** Upgrade mp3gain to 1.6.1.
 + **02.01.18:** Deprecate cpu_core routine lack of scaling.
